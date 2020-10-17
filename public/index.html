@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet'
+		type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
+
+	<title>Smart Note</title>
+</head>
+
+<body>
+	<br>
+
+	<main class="cd-main-content">
+
+
+		<h1>Sign up/ singin</h1>
+		<br>
+		<br>
+		<br>
+		<center>
+
+
+
+			<div class="col-md-8 col-sm-8">
+				<label style="font-weight: 900;" for="fname">Email</label>
+				<div>
+					<input type="email" id="email" name="email" placeholder="Your Email">
+				</div>
+				<label style=" font-weight: 900;" for="textfield">Password</label>
+				<div>
+					<input type="password" name="password" id="password" placeholder="password">
+				</div>
+				<div class=" row">
+					<div class="col-xs-1 col-md-6 col-sm-6 ">
+						<input onclick="signup()" type="submit" value="Sign up">
+
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-3">
+						<input onclick="send()" type="submit" value="Sign in">
+					</div>
+
+				</div>
+
+			</div>
+		</center>
+
+	</main>
+
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource JavaScript -->
+<script src="js/reg.js"></script>
+</body>
+
+</html>

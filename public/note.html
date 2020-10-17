@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet'
+		type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/demo.css"> <!-- Demo style -->
+
+	<title>Smart Note</title>
+</head>
+
+<body>
+	<br>
+
+
+	<main class="cd-main-content">
+		<div style="float: left;">
+			<button class=" cd-btn  js-cd-panel-trigger" data-panel="main">Notes</button>
+		</div>
+		<br><br><br>
+		<br><br><br>
+		<div class=" col-md-8 col-sm-12">
+			<h1>Add A Note</h1>
+			<form>
+				<label style="float: left;font-weight: 900;" for="fname">Subject</label>
+				<div>
+					<input type="text" id="note_subject" name="firstname" placeholder="Your Subject..">
+				</div>
+				<label style="float: left; font-weight: 900;" for="textfield"> Note</label>
+				<div>
+					<textarea name="" id="note" placeholder=" Type note here......"></textarea>
+				</div>
+				<input onclick="send_note()" type="submit" value="Drop">
+			</form>
+		</div>
+
+	</main>
+
+	<div class="cd-panel cd-panel--from-right js-cd-panel-main">
+		<header class="cd-panel__header">
+			<h1>My Notes</h1>
+			<a href="#0" class="cd-panel__close js-cd-close">Close</a>
+		</header>
+
+		<div class="cd-panel__container">
+			<div class="cd-panel__content">
+
+				<div class="row">
+					<div id="my_notes" class="col-md-12">
+					
+					</div>
+
+				</div> <!-- cd-panel__content -->
+			</div> <!-- cd-panel__container -->
+		</div> <!-- cd-panel -->
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource JavaScript -->
+	<script src="js/notes.js"></script>
+
+	<script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function () {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+			content.style.display = "none";
+		} else {
+			content.style.display = "block";
+		}
+	});
+}
+
+	</script>
+</body>
+
+</html>
