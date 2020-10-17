@@ -72,7 +72,7 @@ function signin() {
             button: false,
         }).then((value) => {
             setTimeout(function () {
-                window.location.replace("dashboard.html");
+                window.location.replace("note.html");
             }, 1000)
         });
     }).catch((error) => {

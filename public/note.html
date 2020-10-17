@@ -54,7 +54,16 @@
 
 				<div class="row">
 					<div id="my_notes" class="col-md-12">
-					
+						<button type="button" class="collapsible">  Open Section 1  <span
+								style="float: right;"> 23- may 2020
+							</span></button>
+						<div class="content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+								incididunt ut
+								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+								ullamco
+								laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
 					</div>
 
 				</div> <!-- cd-panel__content -->
@@ -74,24 +83,7 @@
 	<script src="js/main.js"></script> <!-- Resource JavaScript -->
 	<script src="js/notes.js"></script>
 
-	<script>
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener("click", function () {
-		this.classList.toggle("active");
-		var content = this.nextElementSibling;
-		if (content.style.display === "block") {
-			content.style.display = "none";
-		} else {
-			content.style.display = "block";
-		}
-	});
-}
-
-	</script>
+	
 </body>
 
 </html>

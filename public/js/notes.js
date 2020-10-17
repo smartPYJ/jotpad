@@ -17,6 +17,16 @@ firebase.analytics();
 
 
 function send_note() {
+	if (
+	 document.getElementById("note").value === ""){
+
+		swal('JOTPAD', 'C`mon , Write something !!',
+		).then((value) => {
+			setTimeout(function () {
+
+			}, 1000)
+		});
+	}else{
 
 	var dayObj = {
 		0: "Sunday",
@@ -57,7 +67,7 @@ function send_note() {
 			).then((value) => {
 				setTimeout(function () {
 
-				}, 3000)
+				}, 1000)
 			});
 
 		} else {
@@ -66,7 +76,7 @@ function send_note() {
 		}
 
 	});
-}
+}}
 
 
 var content = '';
