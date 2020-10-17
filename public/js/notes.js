@@ -91,11 +91,32 @@ firebase.auth().onAuthStateChanged(function (user) {
 				var text = data.val().Note;
 				var date = data.val().Date;
 
-				content += '<button style="font-weight: 900;" type="button" class="collapsible"> ' + subject + ' <span style="float: right;">' + date + '</span></button> ';
-				content += '<div class="content"> <p>' + text + '</p></div>';
+				// create button to contain subject and date
+				const button = document.createElement('button');
+				button.classList.add('collapsible');
+				button.style.fontWeight = 900;
+				button.innerHTML = `${subject}  <span style="float: right;">${date}</span>`;
 
+				// create paragraph to contain content and hide it
+				const content = document.createElement('p');
+				content.textContent = text;
+				content.style.display = 'none';
+
+				// add button and content to notes
+				$('#my_notes').append(button);
+				$('#my_notes').append(content);
+
+				// add click event listener to button
+				button.addEventListener('click', (event) => {
+					event.target.classList.toggle('active');
+					const content = event.target.nextElementSibling;
+					if (content.style.display == 'block') {
+						content.style.display = 'none';
+					} else {
+						content.style.display = 'block';
+					}
+				});
 			});
-			$('#my_notes').append(content);
 
 
 		});
