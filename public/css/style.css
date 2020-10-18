@@ -509,3 +509,7 @@ input[type=submit]:hover {
   overflow: hidden;
   background-color: #f1f1f1;
 }
+.spantext {
+float: right;
+font-weight: 900;
+}

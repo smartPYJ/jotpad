@@ -17,8 +17,8 @@
 </head>
 
 <body>
-	<br>
 
+	<br>
 
 	<main class="cd-main-content">
 		<div style="float: left;">
@@ -31,16 +31,15 @@
 			<form>
 				<label style="float: left;font-weight: 900;" for="fname">Subject</label>
 				<div>
-					<input type="text" id="note_subject" name="firstname" placeholder="Your Subject..">
+					<input type="text" id="note_subject" placeholder="Your Subject..">
 				</div>
 				<label style="float: left; font-weight: 900;" for="textfield"> Note</label>
 				<div>
-					<textarea name="" id="note" placeholder=" Type note here......"></textarea>
+					<textarea id="note" placeholder=" Type note here......"></textarea>
 				</div>
 				<input onclick="send_note()" type="submit" value="Drop">
 			</form>
 		</div>
-
 	</main>
 
 	<div class="cd-panel cd-panel--from-right js-cd-panel-main">
@@ -54,24 +53,14 @@
 
 				<div class="row">
 					<div id="my_notes" class="col-md-12">
-						<button type="button" class="collapsible">  Open Section 1  <span
-								style="float: right;"> 23- may 2020
-							</span></button>
-						<div class="content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-								incididunt ut
-								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-								ullamco
-								laboris nisi ut aliquip ex ea commodo consequat.</p>
-						</div>
-					</div>
 
-				</div> <!-- cd-panel__content -->
-			</div> <!-- cd-panel__container -->
-		</div> <!-- cd-panel -->
+					</div>
+					
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-
 	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
@@ -83,7 +72,7 @@
 	<script src="js/main.js"></script> <!-- Resource JavaScript -->
 	<script src="js/notes.js"></script>
 
-	
+
 </body>
 
 </html>
